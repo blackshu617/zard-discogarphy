@@ -11,7 +11,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 body { background-color: #FFFFFF; font-family: "Times New Roman", "Meiryo", "MS PGothic", "Hiragino Sans", "Osaka", sans-serif; color: #000000; font-size: 16px; }
 
 /* TD & IMG Fix */
-td { vertical-align: middle; font-size: 16px; }
+td { vertical-align: middle; font-size: 14px; }
 img { border: 0; display: block; }
 
 /* Elements & Icons */
@@ -27,13 +27,13 @@ a:hover { color: #ff0000; text-decoration: underline; }
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 799px) { 
- body { box-sizing: border-box; width: 100%; padding: 0 10px; }
-}
-/* Tà thuật: Khi màn hình điện thoại QUÁ nhỏ, gỡ Float và THÊM KHOẢNG TRỐNG DƯỚI ĐÍT */
-@media screen and (max-width: 480px) {
- .wiki-box { float: none !important; margin: 0 auto 25px auto !important; }
-}
+ @media screen and (max-width: 799px) { 
+  body { box-sizing: border-box; width: 100%; padding: 0 10px; }
+  /* Ép 3 cột thành khối dọc và VẢ LỆCH SANG TRÁI */
+  .resp-badge { display: block !important; width: 100% !important; padding: 0 !important; margin-bottom: 15px !important; text-align: left !important; }
+  /* Khóa chết cái bảng bên trong không cho lề phải lề giữa lôm côm nữa */
+  .resp-badge table { margin: 0 auto 0 0 !important; }
+ }
 </style>
 </head>
 
@@ -42,123 +42,146 @@ a:hover { color: #ff0000; text-decoration: underline; }
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
 <tbody>
  <tr>
-  <td align="center" style="padding: 100px 0;">
+ <td align="center" style="padding: 100px 0;">
 
-   <!-- Top Layout: Biography & Info Box (Wiki Float Style) -->
-   <div style="max-width: 600px; margin: 0 auto; text-align: left;">
+ <!-- Info box -->
+ <table width="250" cellpadding="10" cellspacing="0" style="margin: 0 auto; border: 1px solid #a2a9b1; text-align: left; background-color: #f8f9fa;">
+ <tbody>
+ <tr>
+ <td>
+ <div style="background-color: #181b24; color: #FFFFFF; font-size: 16px; font-weight: bold; padding: 5px;">ZARD<br>ザード</div>
+ <img src="profile_cover.jpg" alt="Izumi Sakai" width="100%" style="margin-bottom: 5px;">
+ <div>ZARD vocalist<br>IZUMI SAKAI（坂井泉水）</div>
+ <div style="margin-top: 45px;">more info:<br><a href="https://wezard.net/" target="_blank">official site</a><span style="user-select: none; -webkit-user-select: none;">・</span><a href="https://ja.wikipedia.org/wiki/ZARD" target="_blank">wikipedia</a></div>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+
+ <!--Discography-->
+ <table border="1" cellpadding="5" width="100%" style="max-width: 600px; margin: 30px auto 0;">
+ <tbody>
+ <tr>
+ <td align="center" style="font-size: 16px;"><b>Discography</b></td>
+ <td align="center" style="font-size: 16px;">
+ <div class="link-pc">
+ <a href="f_album.html"><b>[Album]</b></a> 
+ <a href="f_single.html"><b>[Single]</b></a> 
+ <a href="f_dvd.html"><b>[DVD]</b></a> 
+ <a href="f_bluray.html"><b>[Blu-ray]</b></a> 
+ <a href="f_book.html"><b>[Book]</b></a> 
+ <a href="f_other.html"><b>[Other]</b></a>
+ </div>
+ <div class="link-mobile">
+ <a href="album.html"><b>[Album]</b></a> 
+ <a href="single.html"><b>[Single]</b></a> 
+ <a href="dvd.html"><b>[DVD]</b></a> 
+ <a href="bluray.html"><b>[Blu-ray]</b></a> 
+ <a href="book.html"><b>[Book]</b></a> 
+ <a href="other.html"><b>[Other]</b></a>
+ </div>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+
+ <!-- DÒNG CHỮ CHẠY CUỐI TRANG - START -->
+ <div style="width: 100%; max-width: 600px; margin: 30px auto 0; background-color: #181b24; color: #3dc1ff; box-sizing: border-box;">
+ <marquee behavior="scroll" direction="left" scrollamount="4" style="font-size: 16px; letter-spacing: 0.5px;">
+ ZARD（ザード）was a Japanese pop rock group. Originally a group of five members, with lead vocalist Izumi Sakai（坂井泉水）as group leader. However, Izumi Sakai was the only member who stayed on in the group while others joined and left regularly.
+ </marquee>
+ </div>
+ <!-- DÒNG CHỮ CHẠY CUỐI TRANG - END -->
+
+<!--best selling - start-->
+<div style="width: 100%; max-width: 600px; margin: 40px auto 0;">
+ 
+ <div style="border-left: 5px solid #2b6a9a; padding-left: 10px; margin-bottom: 8px; text-align: left; line-height: 1.1;">
+  <span style="font-size: 16px; font-weight: bold; font-family: 'Times New Roman', serif;">TOP 3 CD SINGLE</span>
+ </div>
+ <hr>
+ 
+ <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 15px;">
+  <tbody>
+   <tr>
     
-    <!-- Right: Info box (Floated) -->
-    <table width="240" cellpadding="10" cellspacing="0" class="wiki-box" style="float: right; margin: 0 0 15px 15px; border: 1px solid #a2a9b1; background-color: #f8f9fa;">
-     <tbody>
-      <tr>
-       <td>
-        <div style="background-color: #181b24; color: #FFFFFF; font-size: 16px; font-weight: bold; padding: 5px;">ZARD<br>ザード</div>
-        <img src="profile_cover.jpg" alt="Izumi Sakai" width="100%" style="margin-bottom: 5px;">
-        <div>ZARD vocalist<br>IZUMI SAKAI（坂井泉水）</div>
-        <div style="margin-top: 45px;">more info:<br><a href="https://wezard.net/" target="_blank">official site</a><span style="user-select: none; -webkit-user-select: none;">・</span><a href="https://ja.wikipedia.org/wiki/ZARD" target="_blank">wikipedia</a></div>
-       </td>
-      </tr>
-     </tbody>
-    </table>
-
-  <!-- Left & Wrap: Biography -->
-    <div style="font-size: 16px; margin-bottom: 10px;">BIOGRAPHY</div>
-    <hr style="margin: 0 0 15px 0; border: none; border-top: 1px solid #ccc;">
-    <div style="margin-bottom: 15px; font-size: 16px; text-align: justify;">ZARD（ザード）is a musical unit centered around vocalist Izumi Sakai（坂井泉水）.</div>
-    <div style="margin-bottom: 15px; font-size: 16px; text-align: justify;">She began playing the piano at the age of six. After graduating from university, she spent some time working under a modeling agency. Later, she met music producer Daiko Nagato, who recognized her exceptional talent as an artist, leading to the formation of ZARD.</div>
-    <div style="margin-bottom: 15px; font-size: 16px; text-align: justify;">The unit made its debut on February 10, 1991, with the single "Good-bye My Loneliness." To date, they have released 45 singles and 22 albums. Boasting staggering sales of 17.733 million singles and 19.998 million albums, ZARD ranked 8th in Oricon's Top Artist Sales for the Heisei Era. Beyond writing for ZARD, Sakai also provided lyrics for numerous other artists, many of which became million-selling hits.</div>
-    <div style="margin-bottom: 0; font-size: 16px; text-align: justify;">Even after Izumi Sakai's passing on May 27, 2007, her music continues to be listened to and sung by countless people, enduring as "eternal standard numbers." (source: wezard.net)</div>
-	
+    <td align="left" width="33%" valign="top" class="resp-badge">
+     <table border="2" cellspacing="1" bgcolor="#ebebeb" width="185">
+      <tbody>
+       <tr>
+        <td width="20" align="center" style="font-size: 14px; font-family: 'Times New Roman', serif;"><b>1</b></td>
+        <td width="50" align="center" valign="middle" style="padding: 2px;">
+         <img src="https://wezard.net/wp-content/uploads/2020/01/BGDH-1031.jpg" width="45" alt="img">
+        </td>
+        <td valign="top" style="padding: 5px; font-size: 12px; font-family: 'Times New Roman', serif;">
+         <div style="height: 85px; position: relative;">
+          <div style="line-height: 1.2;"><b>Makenaide</b><br>負けないで</div>
+          <div style="position: absolute; bottom: 0; left: 0; font-weight: bold;">1.64 M copies</div>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
     
-    <!-- Clear Float (Cực kỳ quan trọng để khung div ôm trọn được Bio và Info Box) -->
-    <div style="clear: both;"></div>
-   </div>
+    <td align="center" width="34%" valign="top" class="resp-badge">
+     <table border="2" cellspacing="1" bgcolor="#ebebeb" width="185">
+      <tbody>
+       <tr>
+        <td width="20" align="center" style="font-size: 14px; font-family: 'Times New Roman', serif;"><b>2</b></td>
+        <td width="50" align="center" valign="middle" style="padding: 2px;">
+         <img src="https://wezard.net/wp-content/uploads/2020/01/BGDH-1005.jpg" width="45" alt="img">
+        </td>
+        <td valign="top" style="padding: 5px; font-size: 12px; font-family: 'Times New Roman', serif;">
+         <div style="height: 85px; position: relative;">
+          <div style="line-height: 1.2;"><b>Yureru Omoi</b><br>揺れる想い</div>
+          <div style="position: absolute; bottom: 0; left: 0; font-weight: bold;">1.39 M copies</div>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+    
+    <td align="right" width="33%" valign="top" class="resp-badge">
+     <table border="2" cellspacing="1" bgcolor="#ebebeb" width="185">
+      <tbody>
+       <tr>
+        <td width="20" align="center" style="font-size: 14px; font-family: 'Times New Roman', serif;"><b>3</b></td>
+        <td width="50" align="center" valign="middle" style="padding: 2px;">
+         <img src="https://wezard.net/wp-content/uploads/2020/01/JBDJ-1011.jpg" width="45" alt="img">
+        </td>
+        <td valign="top" style="padding: 5px; font-size: 12px; font-family: 'Times New Roman', serif;">
+         <div style="height: 85px; position: relative;">
+          <div style="line-height: 1.2;"><b>My Friend</b><br>マイ フレンド</div>
+          <div style="position: absolute; bottom: 0; left: 0; font-weight: bold;">1.00 M copies</div>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+    
+   </tr>
+  </tbody>
+ </table>
+</div>
+<!--best selling - End-->
 
-   <!--Discography-->
-   <table border="1" cellpadding="5" width="100%" style="max-width: 600px; margin: 30px auto 0;">
-    <tbody>
-     <tr>
-      <td align="center" style="font-size: 16px;"><b>Discography</b></td>
-      <td align="center" style="font-size: 16px;">
-       <div class="link-pc">
-        <a href="f_album.html"><b>[Album]</b></a> 
-        <a href="f_single.html"><b>[Single]</b></a> 
-        <a href="f_dvd.html"><b>[DVD]</b></a> 
-        <a href="f_bluray.html"><b>[Blu-ray]</b></a> 
-        <a href="f_book.html"><b>[Book]</b></a> 
-        <a href="f_other.html"><b>[Other]</b></a>
-       </div>
-       <div class="link-mobile">
-        <a href="album.html"><b>[Album]</b></a> 
-        <a href="single.html"><b>[Single]</b></a> 
-        <a href="dvd.html"><b>[DVD]</b></a> 
-        <a href="bluray.html"><b>[Blu-ray]</b></a> 
-        <a href="book.html"><b>[Book]</b></a> 
-        <a href="other.html"><b>[Other]</b></a>
-       </div>
-      </td>
-     </tr>
-    </tbody>
-   </table>
+ <!-- CỤC EXTERNAL LINKS - START -->
+ <div style="width: 100%; max-width: 600px; margin: 25px auto 0; text-align: left; font-size: 16px; box-sizing: border-box;">
+ <b>See also</b>
+ </div>
+ <hr style="max-width: 600px; margin: 10px auto;">
+ <div style="width: 100%; max-width: 600px; margin: 0 auto; text-align: left;">
+ <ul id="external-links" style="margin: 0; padding-left: 20px; list-style-type: disc; line-height: 1.6;">
+ <li><a href="https://zard-lab.net/pv/timeline/index.html" target="_blank">ZARD Shooting Location Timeline</a> (ZARD Laboratory)</li>
+ <li><a href="https://musing-with-zard.blogspot.com/" target="_blank" title="Musing with ZARD">Musing with ZARD (Blog)</a></li>
+ </ul>
+ </div>
+ <!-- CỤC EXTERNAL LINKS - END -->
 
-   <!-- DÒNG CHỮ CHẠY CUỐI TRANG - START -->
-   <div style="width: 100%; max-width: 600px; margin: 30px auto 0; background-color: #181b24; color: #3dc1ff; box-sizing: border-box;">
-    <marquee behavior="scroll" direction="left" scrollamount="4" style="font-size: 16px; letter-spacing: 0.5px;">
-     ZARD（ザード）was a Japanese pop rock group. Originally a group of five members, with lead vocalist Izumi Sakai（坂井泉水）as group leader. However, Izumi Sakai was the only member who stayed on in the group while others joined and left regularly.
-    </marquee>
-   </div>
-   <!-- DÒNG CHỮ CHẠY CUỐI TRANG - END -->
-
-   <!--best selling - start-->
-   <div align="center" style="width: 100%; max-width: 600px; margin: 25px auto 0;">
-    <table border="2" cellspacing="1" bgcolor="#ffffff" width="100%">
-     <tbody>
-      <tr>
-       <td colspan="4" align="center" bgcolor="#ebebeb">
-        <font color="#000"><b>BEST-SELLING TOP 3</b></font>
-       </td>
-      </tr>
-      <tr>
-       <td colspan="2" align="center" bgcolor="#ebebeb"><b>Album</b></td>
-       <td colspan="2" align="center" bgcolor="#ebebeb"><b>Single</b></td>
-      </tr>
-      <tr>
-       <td bgcolor="#ebebeb">&nbsp;1. ZARD BEST The Single Collection</td>
-       <td align="center" bgcolor="#ebebeb" style="width: 12%;">3.03M</td>
-       <td bgcolor="#ebebeb">&nbsp;1. 負けないで</td>
-       <td align="center" bgcolor="#ebebeb" style="width: 12%;">1.64M</td>
-      </tr>
-      <tr>
-       <td bgcolor="#ebebeb">&nbsp;2. 揺れる想い</td>
-       <td align="center" bgcolor="#ebebeb">2.23M</td>
-       <td bgcolor="#ebebeb">&nbsp;2. 揺れる想い</td>
-       <td align="center" bgcolor="#ebebeb">1.39M</td>
-      </tr>
-      <tr>
-       <td bgcolor="#ebebeb">&nbsp;3. OH MY LOVE</td>
-       <td align="center" bgcolor="#ebebeb">2.00M</td>
-       <td bgcolor="#ebebeb">&nbsp;3. マイ フレンド</td>
-       <td align="center" bgcolor="#ebebeb">1.00M</td>
-      </tr>
-     </tbody>
-    </table>
-   </div>
-   <!--best selling - End-->
-
-   <!-- CỤC EXTERNAL LINKS - START -->
-   <div style="width: 100%; max-width: 600px; margin: 25px auto 0; text-align: left; font-size: 16px; box-sizing: border-box;">
-    <b>See also</b>
-   </div>
-   <hr style="max-width: 600px; margin: 10px auto;">
-   <div style="width: 100%; max-width: 600px; margin: 0 auto; text-align: left;">
-    <ul id="external-links" style="margin: 0; padding-left: 20px; list-style-type: disc; line-height: 1.6;">
-     <li><a href="https://zard-lab.net/pv/timeline/index.html" target="_blank">ZARD Shooting Location Timeline</a> (ZARD Laboratory)</li>
-     <li><a href="https://musing-with-zard.blogspot.com/" target="_blank" title="Musing with ZARD">Musing with ZARD (Blog)</a></li>
-    </ul>
-   </div>
-   <!-- CỤC EXTERNAL LINKS - END -->
-
-  </td>
+ </td>
  </tr>
 </tbody>
 </table>
