@@ -24,7 +24,7 @@ img { border: 0; display: block; }
 
 /* Elements & Icons */
 a { background: transparent; text-decoration: none; color: #aaaaaa; }
-a:hover { color: #000000; background-color: #00ffff; text-decoration: none; }
+a:hover { color: #000000; background-color: #00AAAA; text-decoration: none; }
 
 /* PC - Mobile Link Fix */
 .link-pc { display: block; }
@@ -80,10 +80,10 @@ A Japanese musical unit centered around <span style="color: #00AAAA;">Izumi Saka
 <tr>
 <td bgcolor="#000000" align="center" style="padding: 15px;">
 <span class="link-pc">
-<a href="f_album.html">[Album]</a> <a href="f_single.html">[Single]</a> <a href="f_dvd.html">[DVD]</a> <a href="f_bluray.html">[Blu-ray]</a> <a href="f_book.html">[Book]</a> <a href="f_other.html">[Other]</a>
+<a href="f_album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="f_single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="f_dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="f_bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="f_book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="f_other.html">[Other]</a>
 </span>
 <span class="link-mobile">
-<a href="album.html">[Album]</a> <a href="single.html">[Single]</a> <a href="dvd.html">[DVD]</a> <a href="bluray.html">[Blu-ray]</a> <a href="book.html">[Book]</a> <a href="other.html">[Other]</a>
+<a href="album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="other.html">[Other]</a>
 </span>
 </td>
 </tr>
@@ -99,7 +99,7 @@ A Japanese musical unit centered around <span style="color: #00AAAA;">Izumi Saka
 <td>
 <span style="color: #d97700;">
 Top 3 CD 
-<span id="btn-single" style="color: #00ffff; cursor: pointer;" onclick="TabSwitch('single')">[Single]</span> 
+<span id="btn-single" style="color: #00AAAA; cursor: pointer;" onclick="TabSwitch('single')">[Single]</span> 
 <span id="btn-album" style="color: #808080; cursor: pointer;" onclick="TabSwitch('album')">[Album]</span> 
 Sales
 </span>
@@ -180,8 +180,8 @@ Sales
 
 <!-- Footer Note -->
 <tr>
-<td>
-<span style="color: #00aa00;">♦</span> Sales figures compiled from Oricon records.
+<td> 
+<span style="color: #00aa00; user-select: none;">♦&nbsp;&nbsp;</span>Sales figures compiled from Oricon records.
 </td>
 </tr>
 
@@ -205,7 +205,7 @@ document.getElementById('btn-single').style.color = '#808080';
 document.getElementById('btn-album').style.color = '#808080';
 
 document.getElementById('tab-' + tabName).style.display = 'table-row-group';
-document.getElementById('btn-' + tabName).style.color = '#00ffff';
+document.getElementById('btn-' + tabName).style.color = '#00AAAA';
 }
 </script>
 
