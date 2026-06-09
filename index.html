@@ -33,23 +33,6 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 .link-mobile { display: none; }
 @media (pointer: coarse) { .link-pc { display: none; }.link-mobile { display: block; } }
 
-/* Chốt tọa độ dựa trên ô <td> nội dung */
-.black-border { 
-    position: relative; 
-}
-
-.black-border::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: -3px;
-    right: -3px;
-    bottom: -2px;
-    border-left: 1px solid #000000;
-    border-right: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    pointer-events: none;
-}
 </style>
 </head>
 
@@ -62,7 +45,7 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 <td align="center" style="padding: 50px 0;">
 
 <!-- SECTION 1: Cover, Info & More Box (Tách riêng, rộng 600px) -->
-<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; margin-bottom: 30px;">
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; margin-bottom: 40px;">
 <tr>
 <!-- Profile Picture -->
 <td width="120" valign="top">
@@ -101,31 +84,56 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 </td>
 
 
-<!-- SECTION 2: Main Table (Menu & Rankings, rộng 550px) -->
-<table width="550" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
-<tbody>
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; background-color: #000000; background-image: conic-gradient(#333333 90deg, transparent 90deg 180deg, #333333 180deg 270deg, transparent 270deg); background-size: 2px 2px; background-repeat: repeat;">
+  <tr>
+    <td width="25" valign="top">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20" bgcolor="#000000"></td></tr></table>
+    </td>
+    
+    <td width="550" bgcolor="#292929" style="padding: 6px 12px;">
+      
+      <table width="100%" cellpadding="1" cellspacing="0" bgcolor="#292929" style="border-width: 1px 2px; border-style: solid; border-color: #808080;">
+        <tr><td>
+          <table width="100%" cellpadding="0" cellspacing="0" style="border-width: 1px 2px; border-style: solid; border-color: #808080;">
+            
+            <tr><td style="padding: 20px;">
+              
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#393939; border-width: 1px 2px; border-style: solid; border-color: #555555;">
+                <tr><td style="padding: 8px 15px; color: #808080; border-bottom: 1px solid #555555;">Discography Archive</td></tr>
+                <tr>
+                  <td class="black-border" bgcolor="#000000" align="center" style="padding: 15px;">
+                    <span class="link-pc">
+                      <a href="f_album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="f_single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="f_dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="f_bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="f_book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="f_other.html">[Other]</a>
+                    </span>
+                    <span class="link-mobile">
+                      <a href="album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="other.html">[Other]</a>
+                    </span>
+                  </td>
+                </tr>
+              </table>
 
-<tr>
-<td bgcolor="#292929" style="padding: 25px 30px;">
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
 
-<!-- Discography Archive Menu -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#393939; border-width: 1px 2px; border-style: solid; border-color: #555555;">
-<tr><td style="padding: 8px 15px; color: #808080; border-bottom: 1px solid #555555;">Discography Archive</td></tr><tr>
-<td class="black-border" bgcolor="#000000" align="center" style="padding: 15px;">
-<span class="link-pc">
-<a href="f_album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="f_single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="f_dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="f_bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="f_book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="f_other.html">[Other]</a>
-</span>
-<span class="link-mobile">
-<a href="album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="other.html">[Other]</a>
-</span>
-</td>
-</tr>
+    </td>
+    
+    <td width="25" valign="top">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20" bgcolor="#000000"></td></tr></table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" height="15" style="font-size: 0; line-height: 0;"></td>
+  </tr>
 </table>
 
-</td>
-</tr>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr><td height="40"></td></tr>
+</table>
 
-<tr><td height="40"></td></tr>
+<table width="550" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
+  <tbody>
 
 <!-- Top CD Tab Buttons -->
 <tr>
