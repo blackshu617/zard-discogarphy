@@ -33,6 +33,26 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 .link-mobile { display: none; }
 @media (pointer: coarse) { .link-pc { display: none; }.link-mobile { display: block; } }
 
+.btn-disco {
+display: inline-block;
+width: 85px;
+height: 30px;
+line-height: 28px;
+border-style: solid;
+border-color: #ffffff;
+border-width: 1px 2px;
+color: #D0C0B3;
+text-align: center;
+text-decoration: none;
+box-sizing: border-box;
+margin: 5px 3px;
+font-size: 14px;
+  }
+  .btn-disco:hover {
+background-color: #a80000 !important;
+color: #ffffff !important;
+  }
+  
 </style>
 </head>
 
@@ -45,7 +65,7 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 <td align="center" style="padding: 50px 0;">
 
 <!-- SECTION 1: Cover, Info & More Box (Tách riêng, rộng 600px) -->
-<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; margin-bottom: 40px;">
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; margin-bottom: 60px;">
 <tr>
 <!-- Profile Picture -->
 <td width="120" valign="top">
@@ -66,7 +86,7 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 
 <!--More Box & Dithering-->
 <!--font-size: 0; remove spacing-->
-<td width="105" valign="top" style="background-color: #000000; background-image: conic-gradient(#222222 90deg, transparent 90deg 180deg, #222222 180deg 270deg, transparent 270deg); background-size: 2px 2px; background-repeat: repeat; font-size: 0;">
+<td width="105" valign="top" style="background-color: #000000; background-image: conic-gradient(#222222 90deg, transparent 90deg 180deg, #222222 180deg 270deg, transparent 270deg); background-size: 4px 4px; background-repeat: repeat; font-size: 0;">
 
 <table width="105" border="0" cellpadding="0" cellspacing="0" style="position: relative; background-color: #000000;">
 <tr><td style="font-size: 16px;">
@@ -83,48 +103,61 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 </table>
 </td>
 
-
-<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; background-color: #000000; background-image: conic-gradient(#222222 90deg, transparent 90deg 180deg, #222222 180deg 270deg, transparent 270deg); background-size: 2px 2px; background-repeat: repeat;">
+<!--Discography Archive-->
+<table width="600" border="0" cellpadding="0" cellspacing="0" style="text-align: left; background-color: #000000; background-image: conic-gradient(#222222 90deg, transparent 90deg 180deg, #222222 180deg 270deg, transparent 270deg); background-size: 4px 4px; background-repeat: repeat;">
   <tr>
-    <td width="25" valign="top">
-      <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20" bgcolor="#000000"></td></tr></table>
-    </td>
-    
-    <td width="550" bgcolor="#292929" style="padding: 6px 12px;">
-      
-      <table width="100%" cellpadding="1" cellspacing="0" bgcolor="#292929" style="border-width: 1px 2px; border-style: solid; border-color: #808080;">
-        <tr><td>
-          <table width="100%" cellpadding="0" cellspacing="0" style="border-width: 1px 2px; border-style: solid; border-color: #808080;">
-            
-            <tr><td style="padding: 20px;">
-              
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#393939; border-width: 1px 2px; border-style: solid; border-color: #555555;">
-                <tr><td style="padding: 8px 15px; color: #808080; border-bottom: 1px solid #555555;">Discography Archive</td></tr>
-                <tr>
-                  <td class="black-border" bgcolor="#000000" align="center" style="padding: 15px;">
-                    <span class="link-pc">
-                      <a href="f_album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="f_single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="f_dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="f_bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="f_book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="f_other.html">[Other]</a>
-                    </span>
-                    <span class="link-mobile">
-                      <a href="album.html">[Album]</a><span style="user-select: none;">&nbsp;</span><a href="single.html">[Single]</a><span style="user-select: none;">&nbsp;</span><a href="dvd.html">[DVD]</a><span style="user-select: none;">&nbsp;</span><a href="bluray.html">[Blu-ray]</a><span style="user-select: none;">&nbsp;</span><a href="book.html">[Book]</a><span style="user-select: none;">&nbsp;</span><a href="other.html">[Other]</a>
-                    </span>
-                  </td>
-                </tr>
-              </table>
+<td width="25" valign="top">
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20" bgcolor="#000000"></td></tr></table>
+</td>
 
-            </td></tr>
-          </table>
-        </td></tr>
-      </table>
+<td width="550" bgcolor="#292929" style="padding: 6px 12px; box-sizing: border-box;">
 
-    </td>
-    
-    <td width="25" valign="top">
-      <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20" bgcolor="#000000"></td></tr></table>
-    </td>
+<span style="position: relative; display: block;">
+
+<span style="position: absolute; display: block; top: -20px; left: 50%; width: 250px; margin-left: -125px; height: 40px; z-index: 10;">
+
+<span style="position: absolute; display: block; top: 4px; bottom: 0; left: 0; right: 0; border-width: 0 2px 1px 2px; border-style: solid; border-color: #808080; background-color: #000000; box-sizing: border-box;"></span>
+
+<span style="position: absolute; display: block; top: 2px; bottom: 2px; left: 4px; right: 4px; border-width: 0 2px 1px 2px; border-style: solid; border-color: #808080; background-color: #000000; box-sizing: border-box;"></span>
+
+<span style="position: absolute; display: block; top: 0; bottom: 4px; left: 8px; right: 8px; border-width: 1px 2px 1px 2px; border-style: solid; border-color: #808080; background-color: #000000; box-sizing: border-box;">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center" valign="middle" style="color: #D0C0B3; font-size: 16px; letter-spacing: 1px;">
+DISCOGRAPHY ARCHIVE
+</td></tr>
+</table>
+</span>
+
+</span>
+
+<table width="100%" cellpadding="1" cellspacing="0" bgcolor="#292929" style="border-width: 1px 2px; border-style: solid; border-color: #808080; position: relative; z-index: 5;">
+<tr><td>
+<table width="100%" cellpadding="0" cellspacing="0" style="border-width: 1px 2px; border-style: solid; border-color: #808080;">
+<tr>
+<td align="center" style="padding: 35px 10px 25px 10px;">
+
+<a href="f_album.html" class="btn-disco">[ALBUM]</a>
+<a href="f_single.html" class="btn-disco">[SINGLE]</a>
+<a href="f_dvd.html" class="btn-disco">[DVD]</a>
+<a href="f_bluray.html" class="btn-disco">BLU-RAY</a>
+<a href="f_other.html" class="btn-disco">[OTHER]</a>
+
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+
+</span>
+
+</td>
+
+<td width="25" valign="top">
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20" bgcolor="#000000"></td></tr></table>
+</td>
   </tr>
   <tr>
-    <td colspan="3" height="15" style="font-size: 0; line-height: 0;"></td>
+<td colspan="3" height="15" style="font-size: 0; line-height: 0;"></td>
   </tr>
 </table>
 
@@ -134,6 +167,7 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 
 <table width="550" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
   <tbody>
+
 
 <!-- Top CD Tab Buttons -->
 <tr>
