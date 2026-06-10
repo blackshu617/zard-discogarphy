@@ -34,24 +34,36 @@ a.link-more:hover { color: #000000; background-color: #d97700; text-decoration: 
 @media (pointer: coarse) { .link-pc { display: none; }.link-mobile { display: block; } }
 
 .btn-disco {
-display: inline-block;
-width: 85px;
-height: 30px;
-line-height: 28px;
-border-style: solid;
-border-color: #ffffff;
-border-width: 1px 2px;
-color: #D0C0B3;
-text-align: center;
-text-decoration: none;
-box-sizing: border-box;
-margin: 5px 3px;
-font-size: 14px;
-  }
-  .btn-disco:hover {
-background-color: #a80000 !important;
-color: #ffffff !important;
-  }
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+    line-height: 28px;
+    border-style: solid;
+    border-color: #aaaaaa;
+    border-width: 1px 2px;
+    color: #D0C0B3;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 5px 3px;
+    font-size: 14px;
+    
+    /* [TUYỆT KỸ 1]: Phân mảnh transition, cái nào cần mượt thì mới mượt (đúng chuẩn int10h) */
+    transition: border-color .15s, background-color .15s ease-in-out, color .15s ease-in-out;
+    
+    /* [TUYỆT KỸ 2]: Ép nền Đen + Lighten = Vô hình nhưng chuẩn bị "bùng nổ" */
+    background-color: #000000;
+    mix-blend-mode: lighten; 
+}
+
+.btn-disco:hover {
+    background-color: #a80000 !important; /* Đèn đỏ CRT bật sáng */
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    
+    /* Vẫn giữ chút glow sương sương cho nó nịnh mắt */
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+}
   
 </style>
 </head>
@@ -122,7 +134,7 @@ color: #ffffff !important;
 
           <span style="position: absolute; display: block; top: 0; bottom: 4px; left: 8px; right: 8px; border-width: 1px 2px 1px 2px; border-style: solid; border-color: #808080; background-color: #000000; box-sizing: border-box;">
             <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
-              <tr><td align="center" valign="middle" style="color: #D0C0B3; font-size: 16px; letter-spacing: 1px;">
+              <tr><td align="center" valign="middle" style="color: #aaaaaa; font-size: 16px; letter-spacing: 1px;">
                 DISCOGRAPHY ARCHIVE
               </td></tr>
             </table>
