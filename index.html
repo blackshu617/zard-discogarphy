@@ -5,37 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZARD DISCOGRAPHY</title>
 <script type="text/javascript">
-    // Mặc định: màn hình > 1250px thì menu mở, nhỏ hơn thì menu đóng
-    var isMenuOpen = window.innerWidth > 1250;
+    var wasMobile = null; // Ghi nhớ trạng thái màn hình
 
     function initFrames() {
+        var isMobile = window.innerWidth <= 1250;
         var fs = document.getElementById("myFrameset");
-        if (window.innerWidth <= 1250) { 
-            fs.cols = "0,*"; 
-            isMenuOpen = false;
-        } else {
-            fs.cols = "150,*"; 
-            isMenuOpen = true;
+        
+        // Điều khiển tính năng kéo giãn: Mobile thì khóa (true), PC thì thả (false)
+        var frames = fs.getElementsByTagName("frame");
+        if (frames.length >= 2) {
+            frames[0].noResize = isMobile;
+            frames[1].noResize = isMobile;
+        }
+
+        // Chỉ đặt lại width khi tải trang lần đầu hoặc khi chuyển đổi giữa mốc PC và Mobile
+        // Giúp giữ nguyên kích thước đại ca đã kéo trên PC khi thay đổi nhẹ cửa sổ
+        if (wasMobile !== isMobile) {
+            if (isMobile) {
+                fs.cols = "0,*"; 
+            } else {
+                fs.cols = "150,*"; 
+            }
+            wasMobile = isMobile;
         }
     }
 
     function toggleMenu() {
         var fs = document.getElementById("myFrameset");
-        if (isMenuOpen) {
+        // Đọc chiều rộng thực tế thay vì dùng biến true/false (chống bệnh "ngu học" khi kéo thủ công)
+        var colsArray = fs.cols.split(",");
+        var leftWidth = parseInt(colsArray[0]);
+
+        if (!isNaN(leftWidth) && leftWidth > 0) {
             fs.cols = "0,*"; 
-            isMenuOpen = false;
         } else {
             fs.cols = "150,*"; 
-            isMenuOpen = true;
         }
     }
 
-    // --- HÀM THÊM MỚI: Chỉ ẩn menu khi ở chế độ Mobile/Tablet ---
     function closeMenuMobile() {
         if (window.innerWidth <= 1250) {
             var fs = document.getElementById("myFrameset");
             fs.cols = "0,*";
-            isMenuOpen = false;
         }
     }
 
@@ -43,6 +54,8 @@
     window.onresize = initFrames;
 </script>
 </head>
+
+<!-- Khung frameset chính (Đã bỏ bùa ẩn viền để có thể kéo thả trên PC) -->
 <frameset cols="150,*" id="myFrameset">
  <frame src="menu.html" name="left">
  <frame src="profile.html" name="right">
