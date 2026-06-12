@@ -5,12 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZARD DISCOGRAPHY</title>
 <script type="text/javascript">
-    // Mặc định: màn hình > 1250px thì menu mở, nhỏ hơn thì menu đóng
     var isMenuOpen = window.innerWidth > 1250;
 
     function initFrames() {
         var fs = document.getElementById("myFrameset");
-        if (window.innerWidth <= 1250) { // Đổi mốc thành 1250 giống sadgrl
+        if (window.innerWidth <= 1250) { 
             fs.cols = "0,*"; 
             isMenuOpen = false;
         } else {
@@ -25,8 +24,17 @@
             fs.cols = "0,*"; 
             isMenuOpen = false;
         } else {
-            fs.cols = "150,*"; 
+            // Trên mobile, khi mở menu có thể cho nó rộng hơn 150px một chút (ví dụ 180px) để dễ bấm bằng ngón tay
+            fs.cols = "180,*"; 
             isMenuOpen = true;
+        }
+    }
+
+    // --- HÀM MỚI ĐỆ THÊM: Chỉ đóng menu khi đang ở chế độ Mobile ---
+    function closeMenuOnMobile() {
+        if (window.innerWidth <= 1250) {
+            document.getElementById("myFrameset").cols = "0,*";
+            isMenuOpen = false;
         }
     }
 
@@ -34,7 +42,8 @@
     window.onresize = initFrames;
 </script>
 </head>
-<frameset cols="150,*" id="myFrameset">
+
+<frameset cols="150,*" id="myFrameset" frameborder="0" border="0" framespacing="0">
  <frame src="menu.html" name="left">
  <frame src="profile.html" name="right">
 </frameset>
