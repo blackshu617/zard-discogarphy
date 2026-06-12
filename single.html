@@ -21,18 +21,19 @@ td { vertical-align: middle; font-size: 14px; }
 img { border: 0; display: block; }
 
 /* TABLE & CONTENT LAYOUT */
-.table-scroll-wrapper { width: 100%; margin-top: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll-wrapper { width: 100%; margin-top: 10px; overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
 .table-scroll-wrapper table { width: 100%; min-width: 1250px; }
 table { margin: 0 auto; }
 .credit { display: block; margin-left: 30px; }
 
 /* STICKY HEADER & MENU MOBILE */
-.sticky-header { position: -webkit-sticky; position: sticky; top: 0; background-color: #FFFFFF; z-index: 100; }
+.sticky-header { position: -webkit-sticky; position: sticky; top: 0; background-color: #FFFFFF; padding-top: 10px; padding-bottom: 10px; z-index: 100; }
 .inline-menu-btn { display: none; font-size: 28px; cursor: pointer; margin-right: 12px; color: #003399; user-select: none; -webkit-user-select: none; }
 
 /* Mobile - Tablet */
 @media screen and (max-width: 1250px) { 
- body { box-sizing: border-box; width: 100%; padding: 0 10px; }
+ html, body { overflow-x: hidden; }
+ body { box-sizing: border-box; width: 100%; margin: 0; padding: 0 10px; }
  .inline-menu-btn { display: inline-block !important; }
  .sticky-header > span { padding-left: 42px; } }
 </style>
@@ -409,16 +410,8 @@ table { margin: 0 auto; }
 
 
 
-
-
-
-
-
-
-
-
 </div>
-<button class="mobile-menu-btn" onclick="parent.toggleMenu()">☰ Menu</button>
+
 
 
 </body>
