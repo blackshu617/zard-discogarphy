@@ -5,34 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZARD DISCOGRAPHY</title>
 <script type="text/javascript">
-    // Mặc định: màn hình > 768px thì menu mở, nhỏ hơn thì menu đóng
-    var isMenuOpen = window.innerWidth > 799;
+    // Mặc định: màn hình > 1250px thì menu mở, nhỏ hơn thì menu đóng
+    var isMenuOpen = window.innerWidth > 1250;
 
-    // Hàm thiết lập ban đầu khi load trang
     function initFrames() {
         var fs = document.getElementById("myFrameset");
-        if (window.innerWidth <= 768) {
-            fs.cols = "0,*"; // Điện thoại: Ẩn cột menu (0px)
+        if (window.innerWidth <= 1250) { // Đổi mốc thành 1250 giống sadgrl
+            fs.cols = "0,*"; 
             isMenuOpen = false;
         } else {
-            fs.cols = "150,*"; // Máy tính: Hiện cột menu (150px)
+            fs.cols = "150,*"; 
             isMenuOpen = true;
         }
     }
 
-    // Hàm bật/tắt menu khi bấm nút
     function toggleMenu() {
         var fs = document.getElementById("myFrameset");
         if (isMenuOpen) {
-            fs.cols = "0,*"; // Đang mở -> Ẩn đi
+            fs.cols = "0,*"; 
             isMenuOpen = false;
         } else {
-            fs.cols = "150,*"; // Đang ẩn -> Mở ra
+            fs.cols = "150,*"; 
             isMenuOpen = true;
         }
     }
 
-    // Chạy khi load trang và khi xoay màn hình điện thoại
     window.onload = initFrames;
     window.onresize = initFrames;
 </script>
